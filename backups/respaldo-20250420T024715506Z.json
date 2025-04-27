@@ -1,0 +1,174 @@
+[
+  {
+    "_id": "67f6e9a7a8682700f063904e",
+    "nombreArchivo": "Expediente",
+    "tipo": "Diagnostico",
+    "tamano": 210623,
+    "url": "http://localhost:8000/uploads/1744234919263-5192532.jpg",
+    "clasificacion": "Confidencial",
+    "sensibilidad": "Media",
+    "propietario": "67ea035c9e0cedc27915e0c0",
+    "permisos": [
+      "Escritura"
+    ],
+    "fechaCreacion": "2025-04-09T21:41:59.288Z",
+    "historialAcceso": [
+      {
+        "usuario": "67ea035c9e0cedc27915e0c0",
+        "documento": "67f6e9a7a8682700f063904e",
+        "accion": "descarga",
+        "fecha": "2025-04-12T02:51:36.925Z"
+      },
+      {
+        "usuario": "67ea035c9e0cedc27915e0c0",
+        "documento": "67f6e9a7a8682700f063904e",
+        "accion": "descarga",
+        "fecha": "2025-04-12T02:55:40.816Z"
+      },
+      {
+        "usuario": "67ea035c9e0cedc27915e0c0",
+        "documento": "67f6e9a7a8682700f063904e",
+        "accion": "descarga",
+        "fecha": "2025-04-12T02:55:56.820Z"
+      },
+      {
+        "usuario": "67ea035c9e0cedc27915e0c0",
+        "documento": "67f6e9a7a8682700f063904e",
+        "accion": "descarga",
+        "fecha": "2025-04-12T02:56:17.156Z"
+      },
+      {
+        "usuario": "67ea035c9e0cedc27915e0c0",
+        "documento": "67f6e9a7a8682700f063904e",
+        "accion": "descarga",
+        "fecha": "2025-04-12T02:57:22.293Z"
+      },
+      {
+        "usuario": "67ea035c9e0cedc27915e0c0",
+        "documento": "67f6e9a7a8682700f063904e",
+        "accion": "descarga",
+        "fecha": "2025-04-12T02:58:57.463Z"
+      }
+    ],
+    "createdAt": "2025-04-09T21:41:59.297Z",
+    "updatedAt": "2025-04-19T18:51:40.632Z",
+    "__v": 6,
+    "resguardo": {
+      "metodo": "local",
+      "frecuencia": "diaria",
+      "estado": "pendiente",
+      "cifrado": "SHA-256",
+      "ultimaFechaRespaldo": "2025-04-19T18:51:40.630Z"
+    }
+  },
+  {
+    "_id": "67f73d3f3b243d6fd1883d3f",
+    "nombreArchivo": "Expediente ",
+    "tipo": "Historia Clinica",
+    "tamano": 202800,
+    "url": "http://localhost:8000/uploads/1744256319437-2222222222222.jpg",
+    "clasificacion": "Público",
+    "sensibilidad": "Baja",
+    "propietario": "67ea035c9e0cedc27915e0c0",
+    "permisos": [
+      "Escritura"
+    ],
+    "fechaCreacion": "2025-04-10T03:38:39.449Z",
+    "historialAcceso": [],
+    "createdAt": "2025-04-10T03:38:39.456Z",
+    "updatedAt": "2025-04-19T18:51:40.632Z",
+    "__v": 0,
+    "resguardo": {
+      "metodo": "local",
+      "frecuencia": "diaria",
+      "estado": "pendiente",
+      "cifrado": "SHA-256",
+      "ultimaFechaRespaldo": "2025-04-19T18:51:40.630Z"
+    }
+  },
+  {
+    "_id": "67f9daf003089b4dea593650",
+    "nombreArchivo": "Raul Lopez",
+    "tipo": "Historia Clinica",
+    "tamano": 44990,
+    "url": "http://localhost:8000/uploads/1744427760372-image-removebg-preview.png",
+    "clasificacion": "Interno",
+    "sensibilidad": "Media",
+    "propietario": "67ea035c9e0cedc27915e0c0",
+    "permisos": [
+      "Lectura"
+    ],
+    "fechaCreacion": "2025-04-12T03:16:00.380Z",
+    "historialAcceso": [],
+    "createdAt": "2025-04-12T03:16:00.384Z",
+    "updatedAt": "2025-04-19T18:51:40.632Z",
+    "__v": 0,
+    "resguardo": {
+      "metodo": "local",
+      "frecuencia": "diaria",
+      "estado": "completado",
+      "cifrado": "SHA-256",
+      "ultimaFechaRespaldo": "2025-04-19T18:51:40.630Z"
+    }
+  },
+  {
+    "_id": "6803f0e4ab09d1cbd78d453e",
+    "nombreArchivo": "Expediente",
+    "tipo": "Historia Clinica",
+    "tamano": 16340,
+    "url": "http://localhost:8000/uploads/1745088740645-especialistas.jpg",
+    "clasificacion": "Interno",
+    "sensibilidad": "Media",
+    "propietario": "6803efa28eb70bb04f6e9dfa",
+    "permisos": [
+      "Escritura"
+    ],
+    "fechaCreacion": "2025-04-19T18:52:20.653Z",
+    "historialAcceso": [],
+    "createdAt": "2025-04-19T18:52:20.660Z",
+    "updatedAt": "2025-04-19T18:52:51.350Z",
+    "__v": 0,
+    "resguardo": {
+      "metodo": "local",
+      "frecuencia": "diaria",
+      "estado": "completado",
+      "cifrado": "SHA-256"
+    }
+  },
+  {
+    "_id": "6803f47aab09d1cbd78d45c9",
+    "nombreArchivo": "Expediente Jose Marquez",
+    "tipo": "Diagnostico",
+    "tamano": 210623,
+    "url": "http://localhost:8000/uploads/1745089658244-5192532.jpg",
+    "clasificacion": "Público",
+    "sensibilidad": "Media",
+    "propietario": "6803efa28eb70bb04f6e9dfa",
+    "permisos": [
+      "Lectura"
+    ],
+    "fechaCreacion": "2025-04-19T19:07:38.254Z",
+    "historialAcceso": [],
+    "createdAt": "2025-04-19T19:07:38.257Z",
+    "updatedAt": "2025-04-19T19:07:38.257Z",
+    "__v": 0
+  },
+  {
+    "_id": "68045f7f24d01fd7915b5ba0",
+    "nombreArchivo": "Expediente Raul Gimenez",
+    "tipo": "Diagnostico",
+    "tamano": 55305,
+    "url": "http://localhost:8000/uploads/1745117055513-22222.png",
+    "clasificacion": "Público",
+    "sensibilidad": "Media",
+    "propietario": "6803e5b8889b9ea56315204c",
+    "permisos": [
+      "Escritura"
+    ],
+    "fechaCreacion": "2025-04-20T02:44:15.523Z",
+    "historialAcceso": [],
+    "createdAt": "2025-04-20T02:44:15.529Z",
+    "updatedAt": "2025-04-20T02:44:15.529Z",
+    "__v": 0
+  }
+]
