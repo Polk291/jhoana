@@ -6,7 +6,7 @@ const connectDB = require("./config/bd");
 const authRoutes = require("./routes/authRoutes");
 const principalRoutes = require("./routes/principalRoutes");
 const documentosRoute = require("./routes/documentosRoutes");
-const fetch = require("node-fetch"); // Asegúrate de tenerlo instalado
+// Asegúrate de tenerlo instalado
 
 const app = express();
 
@@ -35,11 +35,13 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 
   // PING al servidor cada 4 segundos
-  const serverUrl = process.env.SERVER_URL || `http://localhost:${PORT}`;
   setInterval(() => {
-    fetch(serverUrl)
-      .then(() => console.log("Ping enviado al servidor"))
-      .catch((err) => console.error("Error al hacer ping:", err.message));
+    import("node-fetch").then(({ default: fetch }) => {
+      const serverUrl = process.env.SERVER_URL || `http://localhost:${PORT}`;
+      fetch(serverUrl)
+        .then(() => console.log("Ping enviado al servidor"))
+        .catch((err) => console.error("Error al hacer ping:", err.message));
+    });
   }, 4000);
 });
 
