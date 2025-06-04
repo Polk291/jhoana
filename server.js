@@ -11,7 +11,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "https://gestion-dispositivos-sepia.vercel.app",
+    origin:
+      process.env.CLIENT_URL || "https://gestion-dispositivos-seven.vercel.app",
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization", "Content-Disposition"],
   })
