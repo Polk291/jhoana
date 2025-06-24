@@ -35,14 +35,14 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 
   // PING al servidor cada 4 segundos
-  setInterval(() => {
-    import("node-fetch").then(({ default: fetch }) => {
-      const serverUrl = process.env.SERVER_URL || `http://localhost:${PORT}`;
-      fetch(serverUrl)
-        .then(() => console.log("Ping enviado al servidor"))
-        .catch((err) => console.error("Error al hacer ping:", err.message));
-    });
-  }, 4000);
+ // setInterval(() => {
+   // import("node-fetch").then(({ default: fetch }) => {
+     // const serverUrl = process.env.SERVER_URL || `http://localhost:${PORT}`;
+      //fetch(serverUrl)
+       // .then(() => console.log("Ping enviado al servidor"))
+        //.catch((err) => console.error("Error al hacer ping:", err.message));
+    //});
+  //}, 4000);
 });
 
 module.exports = app;
