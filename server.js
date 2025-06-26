@@ -73,6 +73,7 @@ function startFFmpeg(camera) {
   // Crear carpeta si no existe
   if (!fs.existsSync(cameraPath)) {
     fs.mkdirSync(cameraPath, { recursive: true });
+    console.log(`Carpeta creada para ${camera.name}: ${cameraPath}`);
   }
 
   const ffmpeg = spawn("ffmpeg", [
@@ -112,4 +113,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-
