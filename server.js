@@ -29,19 +29,18 @@ connectDB();
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/principal", principalRoutes);
 app.use("/api/v1/documentos", documentosRoute);
-
-// Rutas estáticas para descargas
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// 📂 Carpeta pública para HLS
-const STREAM_PATH = path.join(__dirname, "public", "streams");
+// ✅ Carpeta de streaming temporal (Render solo permite escribir en /tmp)
+const STREAM_PATH = "/tmp/streams";
 
-// Asegurar que la carpeta general exista
+// Crear carpeta general si no existe
 if (!fs.existsSync(STREAM_PATH)) {
   fs.mkdirSync(STREAM_PATH, { recursive: true });
+  console.log(`📁 Carpeta principal creada: ${STREAM_PATH}`);
 }
 
-// Servir archivos HLS al frontend
+// Servir los archivos de streaming al frontend
 app.use("/streams", express.static(STREAM_PATH));
 
 // 📷 Configuración de cámaras
@@ -50,7 +49,7 @@ const cameras = [
     name: "camera1",
     url:
       process.env.RTSP_URL_1 ||
-      "rtsp://FUPAGUA:FUPAGUA.123@186.23.55.12:554/stream1",
+      "rtsp://FUPAGUA:FUPAGUA.123@192.168.0.103:554/stream1",
   },
   {
     name: "camera2",
@@ -66,14 +65,14 @@ const cameras = [
   },
 ];
 
-// 🛠️ Función para lanzar FFmpeg por cámara
+// 🛠️ Iniciar FFmpeg por cada cámara
 function startFFmpeg(camera) {
   const cameraPath = path.join(STREAM_PATH, camera.name);
 
   // Crear carpeta si no existe
   if (!fs.existsSync(cameraPath)) {
     fs.mkdirSync(cameraPath, { recursive: true });
-    console.log(`Carpeta creada para ${camera.name}: ${cameraPath}`);
+    console.log(`📂 Carpeta creada para ${camera.name}: ${cameraPath}`);
   }
 
   const ffmpeg = spawn("ffmpeg", [
@@ -103,7 +102,7 @@ function startFFmpeg(camera) {
   });
 }
 
-// 🚀 Iniciar streaming de todas las cámaras
+// 🚀 Lanzar los procesos de streaming
 cameras.forEach(startFFmpeg);
 
 // 🌐 Inicializar servidor
